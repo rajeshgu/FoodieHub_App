@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import "./index.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/home/Home";
-
+import ExploreMenu from "./components/exploreMenu/ExploreMenu";
 const App = () => {
   return (
     <div className="app">
