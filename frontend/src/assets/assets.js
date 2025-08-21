@@ -20,11 +20,21 @@ import food_3 from './food_3.png'
 import food_4 from './food_4.png'
 import food_5 from './food_5.png'
 
+import logo from './Logo.png'
+import facebook_icon from './facebook_icon.png'
+import linkedin_icon from './linkedin_icon.png'
+import twitter_icon from './twitter_icon.png'
+
 export const assets = {
   rating_starts,
   add_icon_white,
   add_icon_green,
-  remove_icon_red
+  remove_icon_red,
+  logo,
+  facebook_icon,
+  linkedin_icon,
+  twitter_icon
+
 }
 
 // all menu name and images 
