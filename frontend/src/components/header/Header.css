@@ -1,16 +1,18 @@
 .header {
   height: 34vw;
   margin: 30px auto;
-  background: url('/header_img.png');
-  background-size: contain;
+  background: url('/header_img.png') no-repeat center center;
+  background-size: cover;
   position: relative;
+  display: flex;
+  align-items: flex-end;
 }
 
 .header-content {
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   gap: 1.5vw;
   max-width: 50%;
   bottom: 10%;
@@ -21,31 +23,77 @@
 .header-content h2 {
   font-weight: 500;
   color: white;
-  font-size: max(4.5vw, 22px);
-
+  font-size: clamp(22px, 4.5vw, 48px);
 }
 
 .header-content p {
   color: white;
-  font-size: 1vw;
+  font-size: clamp(12px, 1.2vw, 18px);
+  line-height: 1.4;
 }
 
 .header-content button {
   border: none;
   color: #747474;
   font-weight: 500;
-  padding: 1vw 2.3vw;
+  padding: 0.8em 1.5em;
   background-color: white;
-  font-size: max(1vw, 13px);
+  font-size: clamp(13px, 1vw, 16px);
   border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header-content button:hover {
+  background-color: #f0f0f0;
 }
 
 @keyframes fadeIn {
   0% {
     opacity: 0;
   }
-
   100% {
     opacity: 1;
+  }
+}
+
+/* for tablets */
+@media (max-width: 768px) {
+  .header {
+    height: 50vw;
+  }
+
+  .header-content {
+    max-width: 70%;
+    bottom: 8%;
+    left: 5vw;
+    gap: 2vw;
+  }
+}
+
+/* for mobile */
+@media (max-width: 480px) {
+  .header {
+    height: 60vw;
+  }
+
+  .header-content {
+    max-width: 90%;
+    bottom: 5%;
+    left: 4vw;
+    gap: 3vw;
+  }
+
+  .header-content h2 {
+    font-size: 22px;
+  }
+
+  .header-content p {
+    font-size: 14px;
+  }
+
+  .header-content button {
+    font-size: 14px;
+    padding: 10px 20px;
   }
 }
